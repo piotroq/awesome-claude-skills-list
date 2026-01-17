@@ -99,30 +99,31 @@ Skills for working with complex file formats:
 ### Collections & Libraries
 
 - **[obra/superpowers](https://github.com/obra/superpowers)** - Core skills library for Claude Code with 20+ battle-tested skills including TDD, debugging, and collaboration patterns
+  
   - Features `/brainstorm`, `/write-plan`, `/execute-plan` commands and skills-search tool
   - [superpowers-skills](https://github.com/obra/superpowers-skills) - Community-editable skills repository
   - [Blog: Superpowers](https://blog.fsck.com/2025/10/09/superpowers/) - Author's overview by Jesse Vincent
   - Installation: `/plugin marketplace add obra/superpowers-marketplace`
- 
+
 - **[obra/superpowers-lab](https://github.com/obra/superpowers-lab)** - Experimental skills for `Claude Code Superpowers` (see above)
+  
   - Uses new techniques that are still being refined and tested (i.e. skills here may change over time)
   - [Blog post about its development](https://blog.fsck.com/2025/10/23/naming-claude-plugins/)
   - Install from `superpowers-marketplace` plugin
-
 
 ### Individual Skills
 
 > These will be broken down into categories once there are enough community skills available to list
 
-| Skill | Description |
-| --- | --- |
-| **[ios-simulator-skill](https://github.com/conorluddy/ios-simulator-skill)** | iOS app building, navigation, and testing through automation |
-| **[ffuf-web-fuzzing](https://github.com/jthack/ffuf_claude_skill)** | Expert guidance for ffuf web fuzzing during penetration testing, including authenticated fuzzing with raw requests, auto-calibration, and result analysis |
-| **[playwright-skill](https://github.com/lackeyjb/playwright-skill)** | General-purpose browser automation using Playwright |
-| **[claude-d3js-skill](https://github.com/chrisvoncsefalvay/claude-d3js-skill)** | Visualizations in d3.js |
-| **[claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)** | Comprehensive collection of ready-to-use scientific skills, including working with specialized scientific libraries and databases |
-| **[web-asset-generator](https://github.com/alonw0/web-asset-generator)** | Generates web assets like favicons, app icons, and social media images |
-| **[loki-mode](https://github.com/asklokesh/claudeskill-loki-mode)** | Multi-agent autonomous startup system - orchestrates 37 AI agents across 6 swarms to build, deploy, and operate a complete startup from PRD to revenue |
+| Skill                                                                                  | Description                                                                                                                                               |
+| -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **[ios-simulator-skill](https://github.com/conorluddy/ios-simulator-skill)**           | iOS app building, navigation, and testing through automation                                                                                              |
+| **[ffuf-web-fuzzing](https://github.com/jthack/ffuf_claude_skill)**                    | Expert guidance for ffuf web fuzzing during penetration testing, including authenticated fuzzing with raw requests, auto-calibration, and result analysis |
+| **[playwright-skill](https://github.com/lackeyjb/playwright-skill)**                   | General-purpose browser automation using Playwright                                                                                                       |
+| **[claude-d3js-skill](https://github.com/chrisvoncsefalvay/claude-d3js-skill)**        | Visualizations in d3.js                                                                                                                                   |
+| **[claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)** | Comprehensive collection of ready-to-use scientific skills, including working with specialized scientific libraries and databases                         |
+| **[web-asset-generator](https://github.com/alonw0/web-asset-generator)**               | Generates web assets like favicons, app icons, and social media images                                                                                    |
+| **[loki-mode](https://github.com/asklokesh/claudeskill-loki-mode)**                    | Multi-agent autonomous startup system - orchestrates 37 AI agents across 6 swarms to build, deploy, and operate a complete startup from PRD to revenue    |
 
 _More community skills coming soon! Submit a PR to add your skill._
 
@@ -147,7 +148,7 @@ The easiest way to create a skill is to use the built-in `skill-creator`:
 ### Method 2: Manual Creation
 
 1. **Create folder structure**:
-
+   
    ```
    my-skill/
    ├── SKILL.md          # Main skill file with frontmatter
@@ -158,36 +159,37 @@ The easiest way to create a skill is to use the built-in `skill-creator`:
    ```
 
 2. **Create SKILL.md with frontmatter**:
-
+   
    ```yaml
    ---
    name: my-skill
    description: Brief description for skill discovery (keep concise)
    ---
-
+   
    # Detailed Instructions
-
+   
    Claude will read these instructions when the skill is activated.
-
+   
    ## Usage
    Explain how to use this skill...
-
+   
    ## Examples
    Provide clear examples...
    ```
 
 3. **Add executable scripts** (optional):
-
+   
    - Python, JavaScript, or other scripts Claude can execute
    - Reference them in your SKILL.md instructions
 
 4. **Test locally**:
-
+   
    - Install the skill in Claude Code or Claude Desktop
    - Test with relevant tasks
    - Iterate and refine
 
 5. **Share**:
+   
    - Publish to GitHub
    - Submit to this awesome list via PR
    - Share with your team via git repos or internal distribution
@@ -239,13 +241,13 @@ The easiest way to create a skill is to use the built-in `skill-creator`:
 
 ### Quick Reference: When to Use What
 
-| Tool | Best For |
-|------|----------|
-| **Skills** | Reusable procedural knowledge across conversations |
-| **Prompts** | One-time instructions and immediate context |
-| **Projects** | Persistent background knowledge within workspaces |
+| Tool          | Best For                                             |
+| ------------- | ---------------------------------------------------- |
+| **Skills**    | Reusable procedural knowledge across conversations   |
+| **Prompts**   | One-time instructions and immediate context          |
+| **Projects**  | Persistent background knowledge within workspaces    |
 | **Subagents** | Independent task execution with specific permissions |
-| **MCP** | Connecting Claude to external data sources |
+| **MCP**       | Connecting Claude to external data sources           |
 
 **Use Skills when**: Capabilities should be accessible to any Claude instance. They're portable expertise.
 
@@ -295,7 +297,8 @@ _Video tutorials coming soon! Have a good video about Claude Skills? Submit a PR
 - Building your first custom skill
 - Skills vs MCP comparison
 - Enterprise deployment strategies
-</details>
+  
+  </details>
 
 ## 📰 Articles & Blog Posts
 
@@ -349,11 +352,12 @@ _Video tutorials coming soon! Have a good video about Claude Skills? Submit a PR
 ### Known Issues
 
 - **Linux path bug (Oct 18, 2025)**: Agent SDK uses hardcoded macOS paths instead of environment home directory
-
+  
   - [Issue #268](https://github.com/anthropics/claude-agent-sdk-python/issues/268)
   - Workaround: Manually specify skill paths
 
 - **Enterprise distribution**: No centralized admin management yet for custom skills on claude.ai
+  
   - Use git repositories for team distribution
   - API integration provides more control
 
